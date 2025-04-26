@@ -1,205 +1,351 @@
 @-moz-document url-prefix("chrome:") {
-    :root {
-      --toolbar-bgcolor: black !important;
-      --chrome-background-color: black !important;
-      --arrowpanel-background: black !important;
-      --lwt-accent-color: black !important;
-      --lwt-toolbar-field-background-color: black !important;
-      --lwt-sidebar-background-color: black !important;
-      --lwt-toolbar-field-focus: black !important;
-      --lwt-selected-tab-background-color: black !important;
-      --toolbar-field-focus-background-color: black !important;
-      --lwt-frame: black !important;
-      --arrowpanel-dimmed: #333333 !important;
-      --panel-hover: #333333 !important;
-      --toolbarbutton-hover-background: #333333 !important;
-      --autocomplete-popup-background: #333333 !important;
-      --lwt-toolbarbutton-hover-background: #333333 !important;
-      --findbar-background-color: black !important;
-      --findbar-border-color: transparent !important;
-      --toolbar-bottom-separator-color: transparent !important;
-      --chrome-content-separator-color: transparent !important;
-      --toolbar-field-border-color: transparent !important;
-      --chrome-selection-background-color: #333333 !important;
-      --toolbar-field-separator-color: transparent !important;
-    }
-  
-    /* Target findbar */
-    findbar,
-    .findbar-container,
-    .findbar-textbox,
-    .findbar-find-previous,
-    .findbar-find-next,
-    .findbar-highlight,
-    .findbar-case-sensitive,
-    .findbar-entire-word {
-      background-color: black !important;
-      border: none !important;
-      box-shadow: none !important;
-    }
-  
-    /* Status panel and status bar */
-    #statuspanel,
-    #status-bar,
-    .statuspanel-label {
-      background-color: black !important;
-      border: none !important;
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-  
-    /* History panel and sidebar */
-    #history-panel,
-    #historyTree,
-    .sidebar-placesTree,
-    #PanelUI-history,
-    #appMenu-library-recentlyClosedTabs,
-    #appMenu-library-history {
-      background-color: black !important;
-      border: none !important;
-    }
-  
-    /* Remove ALL remaining borders and separators */
-    :root * {
-      border-color: transparent !important;
-      box-shadow: none !important;
-      outline: none !important;
-    }
-  
-    /* Additional components that might need blackening */
-    #urlbar-container,
-    #searchbar-container,
-    .search-panel-header,
-    .search-panel-one-offs,
-    #widget-overflow,
-    #customization-panel-container,
-    #downloadsPanel,
-    #identity-popup,
-    #BMB_bookmarksPopup,
-    #PlacesToolbar,
-    #edit-controls,
-    #notification-popup,
-    #confirmation-hint,
-    .panel-footer,
-    .panel-header,
-    #pageActionPanel,
-    #appMenu-popup {
-      background-color: black !important;
-      border: none !important;
-      box-shadow: none !important;
-    }
-  
-    /* Remove separator lines */
-    .toolbarbutton-1,
-    .bookmark-item,
-    menuseparator,
-    .splitter,
-    .menuseparator,
-    toolbar::after,
-    toolbar::before {
-      border: none !important;
-      box-shadow: none !important;
-      background: transparent !important;
-    }
-  
-    /* Ensure no divider lines in dropdowns */
-    menuitem,
-    menu {
-      border: none !important;
-      padding: 4px !important;
-      
-      &:hover {
-        background-color: #333333 !important;
-      }
-    }
-  
-    /* Make sure browser viewport background is black */
-    #browser,
-    browser[type="content-primary"],
-    browser[type="content"],
-    #appcontent,
-    #main-window,
-    #content-deck,
-    #content {
-      background: black !important;
-    }
-  
-    /* Ensure tab strip and surrounding areas are black */
-    #titlebar,
-    #TabsToolbar-customization-target,
-    .toolbar-items,
-    .titlebar-spacer,
-    .titlebar-buttonbox-container,
-    #TabsToolbar-customization-target > toolbarspring,
-    #tabbrowser-arrowscrollbox {
-      background-color: black !important;
-    }
-  
-    /* Target the space between and around tabs */
-    .tabbrowser-tab {
-      background-color: black !important;
-      
-      &::before, 
-      &::after {
-        background-color: black !important;
-      }
-    }
-  
-    /* Ensure bottom areas are black */
-    #browser-bottombox,
-    #statuspanel,
-    #navigator-toolbox {
-      background-color: black !important;
-    }
-  
-    /* Additional UI elements that need black background */
-    #nav-bar,
-    #PersonalToolbar,
-    #urlbar-background,
-    #searchbar,
-    .panel-arrowcontent,
-    #main-window,
-    #unified-extensions-view,
-    #TabsToolbar,
-    #sidebar-box,
-    #sidebar-header,
-    .browser-toolbar,
-    menuitem,
-    menu,
-    menupopup {
-      background-color: black !important;
-    }
-  
-    /* Ensure popups and dropdowns are black */
-    panel {
-      -moz-appearance: none !important;
-      background-color: black !important;
-    }
-  
-    /* Handle any remaining toolbar items */
-    toolbar {
-      -moz-appearance: none !important;
-      background-color: black !important;
-    }
-  
-    /* Additional background fixes */
-    #browser-panel,
-    #customization-container,
-    .browserContainer {
-      background-color: black !important;
-    }
-  
-    /* Adjust menu items to prevent icon-text overlap */
-    menupopup > menuitem,
-    menupopup > menu {
-      -moz-box-pack: start !important;
-      padding-inline-start: 30px !important;
-    }
-  
-    /* Ensure menu labels are properly aligned */
-    .menu-text,
-    .menuitem-text {
-      margin-inline-start: 4px !important;
-    }
-  
+  :root {
+    --toolbar-bgcolor: black !important;
+    --chrome-background-color: black !important;
+    --arrowpanel-background: black !important;
+    --lwt-accent-color: black !important;
+    --lwt-toolbar-field-background-color: black !important;
+    --lwt-sidebar-background-color: black !important;
+    --lwt-toolbar-field-focus: black !important;
+    --lwt-selected-tab-background-color: black !important;
+    --toolbar-field-focus-background-color: black !important;
+    --lwt-frame: black !important;
+    --arrowpanel-dimmed: #333333 !important;
+    --panel-hover: #333333 !important;
+    --toolbarbutton-hover-background: #333333 !important;
+    --autocomplete-popup-background: #333333 !important;
+    --lwt-toolbarbutton-hover-background: #333333 !important;
+    --findbar-background-color: black !important;
+    --findbar-border-color: transparent !important;
+    --toolbar-bottom-separator-color: transparent !important;
+    --chrome-content-separator-color: transparent !important;
+    --toolbar-field-border-color: transparent !important;
+    --chrome-selection-background-color: #333333 !important;
+    --toolbar-field-separator-color: transparent !important;
   }
+
+  /* Target findbar */
+  findbar,
+  .findbar-container,
+  .findbar-textbox,
+  .findbar-find-previous,
+  .findbar-find-next,
+  .findbar-highlight,
+  .findbar-case-sensitive,
+  .findbar-entire-word {
+    background-color: black !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* History panel and sidebar */
+  #history-panel,
+  #historyTree,
+  .sidebar-placesTree,
+  #PanelUI-history,
+  #appMenu-library-recentlyClosedTabs,
+  #appMenu-library-history {
+    background-color: black !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  /* Remove ALL remaining borders and separators */
+  :root * {
+    border-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  /* Additional components that might need blackening */
+  #urlbar-container,
+  #searchbar-container,
+  .search-panel-header,
+  .search-panel-one-offs,
+  #widget-overflow,
+  #customization-panel-container,
+  #downloadsPanel,
+  #identity-popup,
+  #BMB_bookmarksPopup,
+  #PlacesToolbar,
+  #edit-controls,
+  #notification-popup,
+  #confirmation-hint,
+  .panel-footer,
+  .panel-header,
+  #pageActionPanel,
+  #appMenu-popup {
+    background-color: black !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Remove separator lines */
+  .toolbarbutton-1,
+  .bookmark-item,
+  menuseparator,
+  .splitter,
+  .menuseparator,
+  toolbar::after,
+  toolbar::before {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+
+  /* Ensure no divider lines in dropdowns */
+  menuitem,
+  menu {
+    border: none !important;
+    padding: 4px !important;
+    
+    &:hover {
+      background-color: #333333 !important;
+    }
+  }
+
+  /* Make sure browser viewport background is black */
+  #browser,
+  browser[type="content-primary"],
+  browser[type="content"],
+  #appcontent,
+  #main-window,
+  #content-deck,
+  #content {
+    background: black !important;
+  }
+
+  /* Ensure tab strip and surrounding areas are black */
+  #titlebar,
+  #TabsToolbar-customization-target,
+  .toolbar-items,
+  .titlebar-spacer,
+  .titlebar-buttonbox-container,
+  #TabsToolbar-customization-target > toolbarspring,
+  #tabbrowser-arrowscrollbox {
+    background-color: black !important;
+  }
+
+  /* Target the space between and around tabs */
+  .tabbrowser-tab {
+    background-color: black !important;
+    
+    &::before, 
+    &::after {
+      background-color: black !important;
+    }
+  }
+
+  /* Additional UI elements that need black background */
+  #nav-bar,
+  #PersonalToolbar,
+  #urlbar-background,
+  #searchbar,
+  .panel-arrowcontent,
+  #main-window,
+  #unified-extensions-view,
+  #TabsToolbar,
+  #sidebar-box,
+  #sidebar-header,
+  .browser-toolbar,
+  menuitem,
+  menu,
+  menupopup {
+    background-color: black !important;
+  }
+
+  /* Ensure popups and dropdowns are black */
+  panel {
+    -moz-appearance: none !important;
+    background-color: black !important;
+  }
+
+  /* Handle any remaining toolbar items */
+  toolbar {
+    -moz-appearance: none !important;
+    background-color: black !important;
+  }
+
+  /* Additional background fixes */
+  #browser-panel,
+  #customization-container,
+  .browserContainer {
+    background-color: black !important;
+  }
+
+  /* Adjust menu items to prevent icon-text overlap */
+  menupopup > menuitem,
+  menupopup > menu {
+    -moz-box-pack: start !important;
+    padding-inline-start: 30px !important;
+  }
+
+  /* Ensure menu labels are properly aligned */
+  .menu-text,
+  .menuitem-text {
+    margin-inline-start: 4px !important;
+  }
+
+  /* Ctrl+Tab switcher styling with black glassmorphism */
+  #ctrlTab-panel {
+    background-color: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(16px) !important;
+    -moz-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 12px !important;
+  }
+
+  .tab-item-container {
+    background: transparent !important;
+    padding: 8px !important;
+  }
+
+  .tab-item {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    border-radius: 8px !important;
+    margin: 4px 0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.03) !important;
+    transition: all 0.2s ease-in-out !important;
+  }
+
+  .tab-item[selected] {
+    background-color: rgba(34, 34, 34, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    transform: translateX(4px) !important;
+  }
+
+  .tab-item:hover:not([selected]) {
+    background-color: rgba(34, 34, 34, 0.6) !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+  }
+
+  /* Stronger bookmark and menu hover states */
+  #BMB_bookmarksPopup menuitem:hover,
+  #BMB_bookmarksPopup menu:hover,
+  #bookmarksMenu menuitem:hover,
+  #bookmarksMenu menu:hover,
+  #personal-bookmarks toolbarbutton:hover,
+  .bookmark-item:hover,
+  .menuitem-iconic:hover {
+    background-color: #222222 !important;
+    -moz-appearance: none !important;
+    color: white !important;
+  }
+
+  /* Force hover states on active items */
+  #BMB_bookmarksPopup *[_moz-menuactive="true"],
+  #bookmarksMenu *[_moz-menuactive="true"],
+  menuitem[_moz-menuactive="true"],
+  menu[_moz-menuactive="true"] {
+    background-color: #222222 !important;
+    -moz-appearance: none !important;
+  }
+
+  /* Override any native hover styles */
+  #personal-bookmarks .toolbarbutton-icon:hover,
+  .bookmark-item .toolbarbutton-icon:hover {
+    background-color: #222222 !important;
+  }
+
+  /* Panel-specific hover states */
+  .panel-subview-body > toolbarbutton:hover,
+  .subviewbutton:hover,
+  .PanelUI-subView toolbarbutton:hover,
+  panelview .toolbarbutton-1:hover,
+  .panel-subview-footer toolbarbutton:hover,
+  .subviewbutton[checked="true"],
+  .subviewbutton[checked="true"]:hover {
+    background-color: #222222 !important;
+    -moz-appearance: none !important;
+  }
+
+  /* Override panel variables */
+  :root {
+    --arrowpanel-dimmed: #222222 !important;
+    --panel-item-hover-bgcolor: #222222 !important;
+    --panel-item-active-bgcolor: #1a1a1a !important;
+  }
+
+  /* Force panel item states */
+  .panel-subview-body > * {
+    &:hover,
+    &[selected="true"],
+    &[checked="true"],
+    &[highlight="true"] {
+      background-color: #222222 !important;
+    }
+  }
+
+  /* Bookmark Toolbar Features */
+  #PlacesToolbarItems {
+      -moz-box-align: center !important;
+  }
+
+  @media (-moz-bool-pref: "uc.bookmarks.center-toolbar") {
+      #PlacesToolbarItems {
+          justify-content: center !important;
+      }
+  }
+
+  @media (-moz-bool-pref: "uc.bookmarks.hide-folder-icons") {
+      .bookmark-item[container="true"] .toolbarbutton-icon {
+          display: none !important;
+      }
+  }
+
+  @media (-moz-bool-pref: "uc.bookmarks.hide-favicons") {
+      .bookmark-item:not([container]) .toolbarbutton-icon {
+          display: none !important;
+      }
+  }
+
+  @media (-moz-bool-pref: "uc.bookmarks.hide-name") {
+      #personal-bookmarks .bookmark-item:not([container]) .toolbarbutton-text {
+          display: none !important;
+      }
+  }
+
+  /* Bookmark Toolbar Animation */
+  #PersonalToolbar[collapsed="false"]:not([customizing]) {
+      position: relative !important;
+      margin-bottom: calc(0px - var(--urlbar-min-height)) !important;
+      transform: rotateX(90deg) !important;
+      transform-origin: top !important;
+      transition: transform 135ms linear !important;
+      z-index: 1 !important;
+      background-color: black !important;
+  }
+
+  #zen-appcontent-navbar-container:hover #PersonalToolbar {
+      transform: rotateX(0deg) !important;
+  }
+
+  #nav-bar:focus-within + #PersonalToolbar {
+      transform: rotateX(0deg) !important;
+  }
+    /* Floating Status Panel */
+    #statuspanel {
+      position: fixed !important;
+      margin: 10px !important;
+      bottom: 0 !important;
+      left: 0 !important;
+      z-index: 1000 !important;
+  }
+
+  #statuspanel-label {
+      background-color: black !important;
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.05) !important;
+      border-radius: 20px !important;
+      padding: 4px 12px !important;
+      margin: 0 !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+      backdrop-filter: blur(8px) !important;
+      -moz-backdrop-filter: blur(8px) !important;
+  }
+
+  /* Hide default status bar */
+  #status-bar {
+      display: none !important;
+  }
+}
