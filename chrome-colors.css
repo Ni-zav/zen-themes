@@ -1,0 +1,167 @@
+@-moz-document url-prefix("chrome:") {
+  :root {
+    --toolbar-bgcolor: black !important;
+    --chrome-background-color: black !important;
+    --arrowpanel-background: black !important;
+    --lwt-accent-color: black !important;
+    --lwt-toolbar-field-background-color: black !important;
+    --lwt-sidebar-background-color: black !important;
+    --lwt-toolbar-field-focus: black !important;
+    --lwt-selected-tab-background-color: black !important;
+    --toolbar-field-focus-background-color: black !important;
+    --lwt-frame: black !important;
+    --arrowpanel-dimmed: #333333 !important;
+    --panel-hover: #333333 !important;
+    --toolbarbutton-hover-background: #333333 !important;
+    --autocomplete-popup-background: #333333 !important;
+    --lwt-toolbarbutton-hover-background: #333333 !important;
+    --findbar-background-color: black !important;
+    --chrome-selection-background-color: #333333 !important;
+    --arrowpanel-dimmed: #222222 !important;
+    --panel-item-hover-bgcolor: #222222 !important;
+    --panel-item-active-bgcolor: #1a1a1a !important;
+  }
+
+  /* Basic color assignments for main UI elements */
+  #urlbar-container,
+  #searchbar-container,
+  #widget-overflow,
+  #downloadsPanel,
+  #identity-popup,
+  #BMB_bookmarksPopup,
+  #PlacesToolbar,
+  #notification-popup,
+  #confirmation-hint,
+  #pageActionPanel,
+  #appMenu-popup,
+  #browser,
+  #appcontent,
+  #main-window,
+  #content-deck,
+  #content,
+  #titlebar,
+  #TabsToolbar-customization-target,
+  .toolbar-items,
+  .tabbrowser-tab,
+  #nav-bar,
+  #PersonalToolbar,
+  #urlbar-background,
+  #searchbar,
+  #unified-extensions-view,
+  #TabsToolbar,
+  #sidebar-box,
+  panel,
+  toolbar,
+  #browser-panel {
+    background-color: black !important;
+  }
+
+  /* Hover states */
+  menuitem:hover,
+  menu:hover {
+    background-color: #333333 !important;
+  }
+
+  .tab-item {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+
+  .tab-item[selected] {
+    background-color: rgba(34, 34, 34, 0.8) !important;
+  }
+
+  .tab-item:hover:not([selected]) {
+    background-color: rgba(34, 34, 34, 0.6) !important;
+  }
+
+  /* Extension panel specific hover states */
+  .unified-extensions-item {
+    background-color: black !important;
+  }
+
+  .unified-extensions-item:hover,
+  .unified-extensions-item[selected="true"] {
+    background-color: #222222 !important;
+  }
+
+  #unified-extensions-view .unified-extensions-item-menu-button:hover {
+    background-color: #333333 !important;
+  }
+
+  /* Context menu styling */
+  menupopup,
+  popup,
+  popup > menu > menupopup,
+  menupopup > menu > menupopup,
+  .textbox-contextmenu,
+  #contentAreaContextMenu,
+  #tabContextMenu,
+  #placesContext,
+  #bookmarksContextMenu {
+    -moz-appearance: none !important;
+    background-color: black !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding: 2px !important;
+  }
+
+  /* Context menu items */
+  menupopup menuitem,
+  menupopup menu,
+  popup menuitem,
+  popup menu,
+  .textbox-contextmenu menuitem,
+  #contentAreaContextMenu menuitem,
+  #contentAreaContextMenu menu,
+  #tabContextMenu menuitem,
+  #tabContextMenu menu,
+  #placesContext menuitem,
+  #placesContext menu,
+  #bookmarksContextMenu menuitem,
+  #bookmarksContextMenu menu {
+    -moz-appearance: none !important;
+    background-color: black !important;
+    color: white !important;
+  }
+
+  /* Context menu hover states */
+  menupopup menuitem:hover,
+  menupopup menu:hover,
+  popup menuitem:hover,
+  popup menu:hover,
+  .textbox-contextmenu menuitem:hover,
+  #contentAreaContextMenu menuitem:hover,
+  #contentAreaContextMenu menu:hover,
+  #tabContextMenu menuitem:hover,
+  #tabContextMenu menu:hover,
+  #placesContext menuitem:hover,
+  #placesContext menu:hover,
+  #bookmarksContextMenu menuitem:hover,
+  #bookmarksContextMenu menu:hover {
+    background-color: #222222 !important;
+    color: white !important;
+  }
+
+  /* Menu separators in context menus */
+  menupopup menuseparator,
+  popup menuseparator {
+    -moz-appearance: none !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    margin: 2px 0 !important;
+  }
+
+  /* Menu and bookmark hover states */
+  #BMB_bookmarksPopup menuitem:hover,
+  #BMB_bookmarksPopup menu:hover,
+  #bookmarksMenu menuitem:hover,
+  #bookmarksMenu menu:hover,
+  #personal-bookmarks toolbarbutton:hover,
+  .bookmark-item:hover,
+  .menuitem-iconic:hover,
+  .panel-subview-body > toolbarbutton:hover,
+  .subviewbutton:hover,
+  .PanelUI-subView toolbarbutton:hover,
+  panelview .toolbarbutton-1:hover {
+    background-color: #222222 !important;
+    color: white !important;
+  }
+}
