@@ -20,7 +20,7 @@ A minimalist, pure black theme modification for Zen Browser that transforms the 
 
 1. Navigate to Zen Browser's user profile directory
 2. Create a folder named `chrome` if it doesn't exist
-3. Copy `chrome.css` into the `chrome` folder
+3. Copy `chrome.css` into the `chrome` folder name it 'userChrome.css'
 4. Restart Zen Browser
 
 ## Customization
